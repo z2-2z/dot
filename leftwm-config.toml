@@ -1,0 +1,54 @@
+modkey = "Mod4"
+mousekey = "Mod4"
+disable_tile_drag = false
+disable_current_tag_swap = true
+focus_behaviour = "Sloppy"
+focus_new_windows = true
+layouts = [
+    "Fibonacci",
+]
+layout_mode = "Tag"
+tags = ["[1] Secondary", "[2] Code", "[3] Terminal", "[4] Browser", "[5]", "[6]", "[7]"]
+max_window_width = 1.0
+workspaces = [
+    { y = 0, x = 0, width = 1920, height = 1080, id = 0 },
+    { y = 0, x = 1920, width = 1920, height = 1080, id = 1 }
+]
+window_rules = [
+    { window_class = "Alacritty", spawn_on_tag = 3 },
+    { window_class = "Navigator", spawn_on_tag = 4 },
+    { window_class = "Google-chrome", spawn_on_tag = 1 },
+    { window_class = "Atom", spawn_on_tag = 2 },
+    { window_class = "VSCodium", spawn_on_tag = 2 },
+]
+keybind = [
+    { command = "CloseWindow", modifier = ["modkey", "Shift"], key = "q" },
+    { command = "SoftReload", modifier = ["modkey", "Shift"], key = "r" },
+    { command = "ToggleFloating", modifier = ["modkey", "Shift"], key = "f" },
+    { command = "Execute", value = "/usr/bin/alacritty", modifier = ["modkey"], key = "t" },
+    { command = "Execute", value = "/usr/local/bin/custom-launcher.sh", modifier = ["modkey"], key = "d" },
+    { command = "Execute", value = "pactl set-sink-volume @DEFAULT_SINK@ -5%", modifier = [], key = "XF86XK_AudioLowerVolume" },
+    { command = "Execute", value = "pactl set-sink-volume @DEFAULT_SINK@ +5%", modifier = [], key = "XF86XK_AudioRaiseVolume" },
+    { command = "Execute", value = "pactl set-sink-mute @DEFAULT_SINK@ toggle", modifier = [], key = "XF86XK_AudioMute" },
+    { command = "Execute", value = "g810-led -fx cwave keys 10s", modifier = [], key = "XF86XK_AudioStop" },
+    { command = "MoveToTag", value = "1", modifier = ["modkey", "Shift"], key = "1" },
+    { command = "MoveToTag", value = "2", modifier = ["modkey", "Shift"], key = "2" },
+    { command = "MoveToTag", value = "3", modifier = ["modkey", "Shift"], key = "3" },
+    { command = "MoveToTag", value = "4", modifier = ["modkey", "Shift"], key = "4" },
+    { command = "MoveToTag", value = "5", modifier = ["modkey", "Shift"], key = "5" },
+    { command = "MoveToTag", value = "6", modifier = ["modkey", "Shift"], key = "6" },
+    { command = "MoveToTag", value = "7", modifier = ["modkey", "Shift"], key = "7" },
+    { command = "FocusWorkspaceNext", modifier = ["modkey"], key = "Right" },
+    { command = "FocusWorkspacePrevious", modifier = ["modkey"], key = "Left" },
+    { command = "GotoTag", value = "1", modifier = ["modkey"], key = "1" },
+    { command = "GotoTag", value = "2", modifier = ["modkey"], key = "2" },
+    { command = "GotoTag", value = "3", modifier = ["modkey"], key = "3" },
+    { command = "GotoTag", value = "4", modifier = ["modkey"], key = "4" },
+    { command = "GotoTag", value = "5", modifier = ["modkey"], key = "5" },
+    { command = "GotoTag", value = "6", modifier = ["modkey"], key = "6" },
+    { command = "GotoTag", value = "7", modifier = ["modkey"], key = "7" },
+    { command = "ToggleFullScreen", modifier = ["modkey"], key = "f" },
+    { command = "MoveToLastWorkspace", modifier = ["modkey", "Shift"], key = "Left" },
+    { command = "MoveToLastWorkspace", modifier = ["modkey", "Shift"], key = "Right" },
+]
+

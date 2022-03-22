@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPTPATH=$(dirname $(realpath $0))
+
+leftwm command "UnloadTheme"
+
+killall -q -s9 -w polybar
+killall -q -s9 -w picom
+
